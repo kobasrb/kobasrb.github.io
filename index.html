@@ -1,0 +1,159 @@
+<!---On indique au préalable que l'on utilise le langage HTML, mais également que notre page est en français.-->
+<!DOCTYPE html>
+<html lang="fr-FR">
+  
+<!--- On commence par indiquer les méta-données de notre document dans la balise head.-->
+<head>
+    <!--- On intègre une ligne qui adaptera mieux notre page aux formats des téléphones.-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"> 
+    <!--- On lie d'abord notre fichier de style CSS à notre fichier HTML.-->
+    <link rel=stylesheet href="./styleprojet.css">
+    <!--- On indique ensuite quelle méthode d'encodage l'interpréteur HTML utilisera pour éviter la non reconnaissance de certains accents.-->
+    <meta charset="UTF-8">
+    <!--- Enfin on rajoute une description, un logo, et un titre à notre page HTML.-->
+    <meta name="description" content="Star Wars, par un fan, pour des fans.">
+    <link rel="icon" href="./Logo/DeathStarIconBlanc.ico">
+    <title>Star Wiki</title>
+    <!--- Ne reste plus qu'à lier le fichier javascript et ajouter un petit audio.-->
+    <script type="text/javascript" src="script.js"></script>
+    <audio id="audio" src="./audioclick.wav"></audio>
+</head>
+
+<!---Le contenu affiché par le navigateur sera contenu dans cette balise body.-->
+<body onclick="fonction_audio()">
+  <!---Nous aurons dans cette balise la barre de navigation et le bouton 'suivant' (le HUD en somme).-->
+  <nav class="nav-barre">
+    <!---On utilise plusieurs articles pour éviter d'utiliser des div ou des span.-->
+    <article class=menu-contenu>
+      <!---On ajoute un bouton next sur la barre de navigation.-->
+      <a onclick="fonction_next()" href="#debut"><img id="next" src="./Décorations/boutton-next.png" alt="Flèche pointant vers la droite"></a>
+      <article class="logo-titre">
+        <h1 id="logo">Star Wiki</h1>
+        <a href="StarWiki.html"><img id="logo-image" src="./Logo/DeathStarIconNoir.ico" alt="Logo représentant l'étoile noire de Star Wars"></a>
+      </article>
+      <nav role="navigation">
+        <article id="menuToggle">
+          <!--On utilise une fausse checkbox pour faire fonctionner le menu hamburger.-->
+          <input id="case" type="checkbox" />
+          <!--On rajoute des span pour faire apparaître la forme de hamburger-->
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a onclick="fonction_start()" href="#intro-clones"><li>Clone</li></a>
+            <a onclick="fonction_droides()" href="#intro-droides"><li>Droïde</li></a>
+            <a onclick="fonction_jedis()" href="#intro-jedis"><li>Jedi</li></a>
+            <a onclick="fonction_mandaloriens()" href="#intro-mandaloriens"><li>Mandalorien</li></a>
+            <a onclick="fonction_contact()" href="#pied-de-page"><li>Contact <p>$#</p></li></a>
+          </ul>
+        </article>
+      </nav>
+    </article>
+  </nav>
+  <br>
+
+  <!---Ici se tiendra l'écran d'accueil permettant de commencer la navigation.-->
+  <section id="accueil-menu">
+    <a onclick="fonction_start()" href="#intro-clones" id="start">START</a>
+  </section>
+
+  <!---Le main contient les 4 sections principales de notre document.-->
+  <main id="debut">
+    <article id="clones">
+      <section id="intro-clones">
+        <h2>Clone</h2>
+      </section>
+      <br>
+        <section id="contenu-clones">
+          <p>
+          Les soldats clones (Clone Troopers en version originale) ou simplement désignés comme les clones, sont des personnages de Star Wars. Ils sont au service de la République galactique durant ses dernières années et servent notamment lors de la Guerre des clones, débutant 22 ans avant la bataille de Yavin et se terminant 19 ans avant cette dernière, lors de la proclamation de l'Empire galactique. Ils sont physiquement identiques et possèdent les mêmes capacités d'endurance et de réflexion. Ils ont été fabriqués dans la ville de Tipoca City sur la planète Kamino. Leurs gènes ont été modifiés à partir de celui du chasseur de primes Jango Fett. Leur croissance est également accélérée pour qu’ils grandissent deux fois plus vite que la normale. Ils sont éduqués et entraînés uniquement à l'usage militaire.
+
+          Ils apparaissent dans plusieurs films et séries télévisées, leur première apparition s'effectue en 2002 dans L'Attaque des clones, puis dans La Revanche des Sith en 2005. Ils deviennent ensuite les principaux personnages du film d'animation The Clone Wars en 2008, et de sa série télévisée éponyme. Ils intègrent ensuite la série Rebels. En 2018, il est confirmé que l'un d'eux, Rex, participe à la bataille d'Endor visible dans Le Retour du Jedi.
+          Le maître Jedi Sifo-Dyas est allé en secret sur Kamino afin de commander une armée de clones pour le compte de la République galactique. Il est assassiné peu après par Dark Tyranus qui avait découvert ses plans. Les Kaminoens  engagent le chasseur de prime Jango Fett pour servir de modèle aux soldats clones. 
+          Une dizaine d'années après, la fin de la guerre semble proche, mais les clones sont toujours déployés un peu partout dans la Galaxie, et les séparatistes parviennent à lancer un assaut sur Coruscant durant lequel ils enlèvent le chancelier suprême Palpatine. Ce dernier est tout de même récupéré à l'issue de la bataille, mais le général Grievous s'échappe et se réfugie avec les autres leaders séparatistes sur Utapau. Le maître Jedi Obi-Wan Kenobi y est envoyé avec un bataillon de clones sous les ordres du commandant Cody. Yoda est lui envoyé sur Kashyyyk avec les clones du commandant Gree afin de repousser une invasion droïde.Sur Coruscant, le chancelier Palpatine avec l'aide de son nouvel apprenti Dark Vador, ordonne à tous les clones de toute la Galaxie, d’exécuter l'Ordre 66. Tous les soldats clones se retournent contre les Jedi, et les exterminent. Le commandant Bacara tue Ki-Adi-Mundi sur Mygeeto, le commandant Bly s'occupe d'Aayla Secura sur Felucia, et le commandant Neyo de Stass Allie sur Saleucami. Les commandants Gree et Cody échouent à tuer leurs maîtres Jedi, respectivement Yoda et Obi-Wan Kenobi, le premier étant même décapité par le Jedi.Le capitaine Rex se trouvait sur Mandalore avec Ahsoka Tano à la recherche de Dark Maul lorsqu'on lui ordonne d’exécuter l'Ordre 66 sur leur retour. Après divers aventures l'ex-jedi retire à Rex sa puce inhubitrice, et s'échappent ensemble après avoir simulé leur mort, puis se séparent, estimant qu'il est trop dangereux pour eux de rester ensemble.
+          </p>
+          <!---On incluera dans chaque section principale, des photos en .png pour styliser le document.-->
+          <img id="aurebesh" src="./Décorations/AurebeshCourage.png" alt="écriture en langue Aurebesh provenant de Star Wars signifiant courage">
+        </section>
+        <section class="photos-clones">
+          <img id="illustration" src="./Photos/Clones/clones1.jpg" alt="Photo représentant un régiment de clones dans un sombre vaisseau.">
+          <img id="illustration" src="./Photos/Clones/clones2.jpg" alt="Photo de clones alliés à un Jedi.">
+          <img id="illustration" src="./Photos/Clones/clones3.jpg" alt="Photo de clones posanat au milieu des cendres d'un champ de bataille.">
+        </section>
+      </article>
+    <article id="droides">
+      <section id="intro-droides">
+        <h2>Droïde</h2>
+      </section>
+      <br>
+        <section id="contenu-droides">
+          <p>
+          Un droïde désignait un être mécanique, généralement une structure mécanique de taille variable mûe par une intelligence artificielle plus ou moins élaborée. Les droïdes étaient créés et utilisés pour accomplir des tâches pour les espèces intelligentes. Certaines personnes les traitaient comme de simples objets, mais d'autres pouvaient les considérer comme des compagnons voire même des amis.
+          Dans la galaxie, des millions de droïdes étaient utilisés partout et dans tous les systèmes stellaires. Il y avait différents types de droïdes, dont ;
+          Les droïdes de combat : Surtout utilisés par la CSI, ils étaient construits par des usines (Geonosis, par exemple) et n'étaient pas dotés d'une grande intelligence. Ils se contentaient d'obéir à leurs commandants.
+          Les droïdes astromécanos: comme R2-D2, ces droïdes étaient au service des humains : ils étaient dotés d'une très grande intelligence et avaient des comportements différents (R2-D2 est têtu). Ils pouvaient avoir différents rôles : mécanicien, copilote, etc...
+          Les droïdes de protocole : comme C-3PO, ces droïdes étaient spécialisés dans la communication avec de nombreuses formes de vie.
+          À un moment pendant la Guerre des Clones, le Comte Dooku reçut plusieurs informations concernant le cortosis de la part d'une source inconnue. Il décida alors d'implanter une usine de droïdes sur la planète éloignée Mokivj et nomma le Duc Solha, l'un de ses proches dans la noblesse serennienne, à sa tête.
+          Une fois sur la planète, ils prirent possession d'une usine déjà construire et réduisirent en esclavage les ouvriers y travaillant, les forçant à porter des bracelets électroniques et à travailler pour la Confédération des Systèmes Indépendants contre leur gré.
+          Cependant, les activités Séparatistes ne passèrent pas inaperçues très longtemps car Duja, une espionne au service de la Sénatrice Padmé Amidala, découvrit les agissements de la CSI et alors qu'elle allait fournir les données à Amidala, elle fut tuée sur ordre du Duc Solha. Malgré les années de recherche et d'expériences menées pour tenter de surpasser l'armée clone de la République, les tas de ferraille de l'alliance Séparatiste ne seront que très peu à pouvoir rivaliser avec les clones, et encore moins nombreux à rivaliser avec des Jedis.. C'est ce qui leurs a donné un certain ton humoristique dans la saga, leur incompétence est devenue un running-gag au fil des années.
+          Et c'est cette incompétence qui les tuera. Après l'exécution de l'ordre 66, les droïdes n'étaient plus d'aucune utilité aux adversaires car ils contrôlaient à présent les clones de l'ex République. C'est également la raison pour laquelle le Premier Ordre, une trentaine d'années plus tard, se servait de "clones", ou plutôt de réfugiés prisonniers, bien plus efficaces que des robots aussi intelligents qu'un aspirateur.
+          </p>        
+          <img id="aurebesh" src="./Décorations/AurebeshCourage.png" alt="écriture en langue Aurebesh provenant de Star Wars signifiant courage">
+        </section>
+        <section class="photos-droides">
+          <img id="illustration" src="./Photos/Droides/droides1.jpg" alt="Photo représentant un groupe de droïdes.">
+          <img id="illustration" src="./Photos/Droides/droides2.jpg" alt="Photo représentant un groupe de droïdes.">
+          <img id="illustration" src="./Photos/Droides/droides3.jpg" alt="Photo représentant un groupe de droïdes.">
+        </section>
+    </article>
+    <article id="jedis">
+      <section id="intro-jedis">
+        <h2>Jedi</h2>
+      </section>
+      <br>
+        <section id="contenu-jedis">
+          <p>
+          L'origine du mot « Jedi » n'est pas connue, il pourrait provenir du japonais « 時代劇 » (Jidai-geki), nom d'un genre théâtral, cinématographique et télévisuel japonais consacré à l'histoire médiévale du Japon. Il pourrait aussi être inspiré des mots « Jed » et « Jeddak », signifiant respectivement « roi » et « empereur » dans les romans Cycle de Mars, qui ont inspiré l'univers de Star Wars.
+          Pendant la guerre des clones, en 32 av. BY, alors qu'ils forment une organisation centralisée indispensable à la République, les Jedi découvrent la réapparition de seigneurs Sith grâce à Qui-Gon Jinn qui combat Dark Maul avant de s'enfuir de Tatooine.Plus tard, les Sith dirigent un mouvement séparatiste au sein de la République. La guerre qui s'ensuit conduit les Jedi à prendre une part plus active au sein de la République, en agissant comme guerriers pour le compte du Sénat. La guerre des clones se termine pourtant par la fin de l'ordre Jedi et la création d'un Empire galactique par le seigneur Sith Dark Sidious. Seuls quelques Jedi en réchappent, parmi lesquels les maîtres Obi-Wan Kenobi, Yoda, le padawan Caleb Dume (alias Kanan Jarrus), et le padawan Cal Kestis.
+          Pendant la guerre civile galactique,  les deux maîtres Jedi restants, Yoda et Obi-Wan Kenobi, mettent leurs espoirs dans les deux nouveau-nés d'Anakin Skywalker, Luke et Leia, pour vaincre l'Empire et restaurer l'Ordre. La bataille de Yavin, quelque vingt années plus tard, semble leur donner finalement raison : si les dispositions supposées de Leia pour la Force ne semblent être pour rien dans sa position au sein de la rébellion contre l'Empire, Luke, au contraire, commence à la maîtriser. Progressivement, avec l'aide de Yoda, celui-ci apprend à utiliser son pouvoir et devient Chevalier Jedi, malgré un temps de formation extrêmement court dû aux circonstances exceptionnelles.
+          Au lendemain de la chute de l'Empire galactique et après les morts consécutives d'Obi-Wan, Yoda et Anakin, Luke se trouve être le dernier des Jedi (Caleb Dume est mort durant la guerre et son apprenti, Ezra Bridger, est porté disparu). Luke décide de créer un nouvel Ordre, au sein duquel il admet plusieurs élèves, parmi lesquels son neveu, Ben Solo, qui devient rapidement son élève le plus prometteur. Mais Ben, perverti par un individu à la puissante maîtrise du côté obscur, Snoke, assassine les autres apprentis de son oncle et brûle l'académie Jedi, avant de prendre le nom de Kylo Ren. Luke Skywalker part en exil sur Ahch-To pendant au moins six ans et se forme à la Force jusqu'à l'arrivée de Rey, une jeune fille originaire de Jakku qui y est sensible. Ayant songé à mettre un terme définitif à l'Ordre Jedi, Luke se ravise grâce à l'apparition du fantôme de Yoda et meurt après avoir affronté Kylo, en 34 après B.Y. Malgré son absence quasi-totale de formation dans un premier temps, puis avec l'aide de Leia, Rey devient la dernière tenante de l'héritage des Jedi, et avec l'aide de tous ses devanciers, finit par vaincre son grand-père, l'empereur Palpatine, mettant ainsi fin au Premier Ordre. La dernière scène du neuvième épisode de la saga Star Wars, la montre sur Tatooine, enterrant les sabres lasers de Luke et de Leia, brandissant celui à lame jaune qu'elle s'est fabriqué et choisissant le nom de Rey Skywalker.
+          </p>
+          <img id="aurebesh" src="./Décorations/AurebeshCourage.png" alt="écriture en langue Aurebesh provenant de Star Wars signifiant courage">
+        </section>
+        <section class="photos-jedis">
+          <img id="illustration" src="./Photos/Jedis/jedis1.jpg" alt="Photo représentant le duel entre Anakin et Obi-Wan.">
+          <img id="illustration" src="./Photos/Jedis/jedis2.jpg" alt="Photo représentant le Conseil des Maîtres Jedis décimé.">
+          <img id="illustration" src="./Photos/Jedis/jedis3.jpg" alt="Photo représentant le temple Jedi de Coruscant.">
+        </section>
+    </article>
+    <article id="mandaloriens">
+      <section id="intro-mandaloriens">
+        <h2>Mandalorien</h2>
+      </section>
+      <br>
+        <section id="contenu-mandaloriens">
+          <p>
+          Les Mandaloriens était le nom désignant les habitants de Mandalore et des mondes sous son influence comme Concordia, Concord Dawn, Kalevala ou Krownest. Issue d'une longue tradition guerrière, Mandalore s'était rangée derrière les idéaux pacifistes du gouvernement des Nouveaux Mandaloriens à l'époque de la Guerre des Clones. La Death Watch, un groupe dissident, n'hésita pas à s'allier à la Confédération des Systèmes Indépendants puis au Collectif des Ombres pour prendre le pouvoir afin que Mandalore retrouve sa gloire passée en tant que peuple guerrier. Après l'avènement de l'Empire Galactique, le peuple de Mandalore vécut sous la domination Impériale avec Gar Saxon pour Vice-Roi.Aussi loin que remonte l'histoire connue des Mandaloriens, cette dernière est jalonnée de combat et de guerre. En des temps anciens, des guerriers Mandaloriens effectuèrent une série de croisades qui les amenèrent à entrer en conflit avec l'Ordre Jedi. Au cours de cette période, les Mandaloriens affrontèrent et furent battus par les Chevaliers Jedi à de multiples reprises. À l'époque de la Guerre des Clones, des peintures murales retraçant ces exploits pouvaient être vues à Sundari, la capitale de Mandalore, et sur la lune Concordia.Pendant une croisade dans la Bordure Intérieure, les Mandaloriens dévastèrent la planète Ubduria par mépris pour les Ubduriens qu'ils considéraient comme des lâches sans honneur.
+          Les Mandaloriens affrontèrent également l'Ancienne République. Au cours de la chute de la République, des membres de la Maison Vizsla prirent d'assaut le Temple Jedi sur Coruscant et récupèrent le sabre noir. Ce sabre laser unique en son genre avait été fabriqué par Tarre Vizsla, le tout premier Mandalorien à être devenu Jedi. La planète Concord Dawn, une colonie Mandalorienne, fut ravagée par plus d'une centaine de conflits opposant uniquement les Mandaloriens entre eux. Ces siècles de conflit permanent laissèrent affectèrent Mandalore un peu plus à chaque fois. La dernière lutte qui opposa les Mandaloriens aux Jedi causa un cataclysme d'une telle ampleur que la surface de Mandalore fut transformée en un désert sans vie. Depuis, ces habitants furent contraints de vivre à l'intérieur de dôme scellé hermétiquement.  Et bien qu'aujourd'hui les Mandaloriens soient quasiment éteints, leur aura de mystère et de puissance est toujours aussi forte dans la galaxie. Pour la plupart des peuples de l'univers, le simple nom de Mandalorien évoque respect et crainte et, de fait, les porteurs de la célèbre armure méritent en général amplement cette réputation. Au cours de leur histoire, les Mandaloriens se firent essentiellement connaître par leurs actions militaires - souvent contre le gouvernement galactique en place. La plupart des gens l'ignorent, mais les Guerriers de l'Ombre disposent également d'une forte identité culturelle et d'un code d'honneur les plaçant bien au-dessus d'un simple groupe de mercenaires sans pitié comme on les dépeints parfois.
+          </p>
+          <img id="aurebesh" src="./Décorations/AurebeshCourage.png" alt="écriture en langue Aurebesh provenant de Star Wars signifiant courage">
+        </section>
+        <section class="photos-mandaloriens">
+          <img id="illustration" src="./Photos/Mandaloriens/mandaloriens1.jpg" alt="Photo représentant le mandalorien Mando avancer sous un soleil couchant.">
+          <img id="illustration" src="./Photos/Mandaloriens/mandaloriens2.jpg" alt="Photo représentant Mando en train de combattre 3 soldats clones de l'empire.">
+          <img id="illustration" src="./Photos/Mandaloriens/mandaloriens3.jpg" alt="Photo représentant un groupe de mandaloriens armés jusqu'aux dents.">
+        </section>
+    </article>
+  </main>
+  <br>
+  <!---Enfin, on ajoute le pied de page est notre document est terminé, dans sa forme du moins.-->
+  <footer id="pied-de-page">
+      <p id="lucasfilms">{</p>
+        <a href="https://www.instagram.com/starwars/" target="blank"><img id="logo-insta" class="rs" src="./Réseaux Sociaux/logo-insta.png" alt="Logo d'Instagram"></a>
+        <a href="https://fr-fr.facebook.com/StarWars.fr/" target="blank"><img id="logo-facebook" class="rs" src="./Réseaux Sociaux/logo-facebook.png" alt="Logo de Facebook"></a>
+        <a href="https://twitter.com/starwars?s=20" target="blank"><img id="logo-twitter" class="rs" src="./Réseaux Sociaux/logo-twitter.png" alt="Logo de Twitter"></a>
+        <a href="https://www.youtube.com/user/starwars" target="blank"><img id="logo-youtube" class="rs" src="./Réseaux Sociaux/logo-youtube.png" alt="Logo de YouTube"></a>
+    <p id="droits"><small>TM & © Lucasfilm Ltd. Droits Réservés par <a id="mail" href="mailto:anthonykobanovic@icloud.com">Anthony Kobanovic</a></small></p>
+  </footer>
+</body>
+</html> 
